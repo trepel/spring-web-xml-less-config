@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jboss-deployment-structure xmlns="urn:jboss:deployment-structure:1.2">
+    <deployment>
+        <dependencies>
+            <module name="org.springframework.spring" slot="main" export="true" annotations="true">
+                <imports>
+                    <include path="META-INF**"/>
+                    <include path="org**"/>
+                </imports>
+                <exports>
+                    <include path="META-INF**"/>
+                    <include path="org**"/>
+                </exports>
+            </module>
+        </dependencies>
+    </deployment>
+</jboss-deployment-structure>
