@@ -3,7 +3,7 @@
 
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.trepel.spring.test</groupId>
-    <artifactId>web-xml-less-spring-config</artifactId>
+    <artifactId>spring-web-xml-less-spring-config</artifactId>
     <packaging>war</packaging>
     <version>1.0-SNAPSHOT</version>
     <name>Web.xml-less Spring Configuration</name>
@@ -76,7 +76,7 @@
     </dependencies>
 
     <build>
-        <finalName>web-xml-less-config</finalName>
+        <finalName>spring-web-xml-less-config</finalName>
 
         <plugins>
             <plugin>
