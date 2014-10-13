@@ -11,6 +11,7 @@
     <properties>
         <spring.scope>compile</spring.scope>
         <spring.version>4.0.5.RELEASE</spring.version>
+        <spring.web.scope>compile</spring.web.scope>
     </properties>
 
     <dependencies>
@@ -18,41 +19,36 @@
             <groupId>org.jboss.spec.javax.servlet</groupId>
             <artifactId>jboss-servlet-api_3.1_spec</artifactId>
             <version>1.0.0.Final</version>
+            <scope>provided</scope>
         </dependency>
 
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-core</artifactId>
             <version>${spring.version}</version>
-            <!-- <scope>${spring.scope}</scope> -->
+            <scope>${spring.scope}</scope>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-beans</artifactId>
             <version>${spring.version}</version>
-            <!-- <scope>${spring.scope}</scope> -->
+            <scope>${spring.scope}</scope>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
             <version>${spring.version}</version>
-            <!-- <scope>${spring.scope}</scope> -->
+            <scope>${spring.scope}</scope>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context-support</artifactId>
             <version>${spring.version}</version>
-            <!-- <scope>${spring.scope}</scope> -->
+            <scope>${spring.scope}</scope>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-aop</artifactId>
-            <version>${spring.version}</version>
-            <!-- <scope>${spring.scope}</scope> -->
-        </dependency>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-web</artifactId>
             <version>${spring.version}</version>
             <scope>${spring.scope}</scope>
         </dependency>
@@ -60,7 +56,14 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-expression</artifactId>
             <version>${spring.version}</version>
-            <!-- <scope>${spring.scope}</scope> -->
+            <scope>${spring.scope}</scope>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>${spring.version}</version>
+            <scope>${spring.web.scope}</scope>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
@@ -93,7 +96,7 @@
         <profile>
             <id>module-spring</id>
             <properties>
-                <spring.scope>provided</spring.scope>
+                <spring.web.scope>provided</spring.web.scope>
             </properties>
             <build>
                 <plugins>
